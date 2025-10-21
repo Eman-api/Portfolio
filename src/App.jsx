@@ -23,73 +23,131 @@ const SectionTitle = ({ title, subtitle }) => (
 
 // ---------- Data
 const PROFILE = {
-  name: "Enmanuel Matos",
-  title: "Mechatronics Engineer • Developer • Builder",
-  blurb: "Inventive, purpose‑driven engineer blending mechanics, software, and AI to build useful systems.",
+  name: "Enmanuel Matos Reyes",
+  title: "Mechatronics Engineering Student • Robotics & Automation",
+  blurb: "Mechatronics student with hands-on experience in automation, CAD modeling, and sensor-based systems. Strong foundation in PLC programming, mechanical design, and cross-functional teamwork. Seeking a 2025 summer-fall co-op focusing on Robotics and Automation.",
   location: "Rochester, NY",
-  email: "enmanuel@example.com",
-  github: "https://github.com/YOUR_GITHUB_USERNAME",
-  linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN/",
-  resumeUrl: "/resume.pdf",
+  email: "enmanuel.m.r.1216@gmail.com",
+  github: "https://github.com/Eman-api",
+  linkedin: "https://www.linkedin.com/in/enmanuel-matos",
+  resumeUrl: "/portfolio/resume.pdf",
+  phone: "(646)-387-3270",
+  education: "Rochester Institute of Technology (RIT) - B.S. Mechatronics, May 2027 - GPA 3.07",
 };
 
 const SKILLS = {
-  Programming: ["Python", "C/C++", "Java", "JavaScript/React", "MATLAB"],
-  Engineering: ["PLC Programming", "SolidWorks", "Circuit Design", "Sensors & Instrumentation"],
-  Tools: ["Git/GitHub", "TailwindCSS", "Excel", "RocketPy", "VS Code"],
-  Soft: ["Leadership", "Project Management", "Technical Writing"],
+  "Robotics & Automation": [
+    "RobotStudio",
+    "PLC Programming (Allen-Bradley/Siemens)",
+    "Pneumatic & Hydraulic Systems",
+    "Sensor Integration",
+    "PID & Motion Control"
+  ],
+  "Embedded Systems": [
+    "Arduino",
+    "Raspberry Pi",
+    "Code Composer Studio",
+    "Embedded C/C++",
+    "Data Acquisition"
+  ],
+  "AI & Data": [
+    "Python (ML/Automation)",
+    "LangGraph",
+    "OpenCV",
+    "MATLAB",
+    "Excel Automation"
+  ],
+  "Design & Simulation": [
+    "SolidWorks",
+    "Autodesk Inventor",
+    "AutoCAD",
+    "Simulink",
+    "RocketPy",
+    "OpenRocket"
+  ],
+  "Programming": [
+    "C/C++",
+    "Python",
+    "Java",
+    "MATLAB",
+    "SQL",
+    "ABB RAPID"
+  ],
+  "Project Tools": [
+    "Git/GitHub",
+    "System Integration",
+    "Technical Documentation",
+    "Agile Collaboration"
+  ]
 };
 
 const PROJECTS = [
   {
-    title: "RocketPy Web App",
-    description: "A simple interface for teammates to run RocketPy simulations without touching code.",
-    stack: ["React", "Python", "RocketPy", "Vite"],
-    github: "https://github.com/youruser/rocketpy-web",
+    title: "RocketPy Simulation & Launch Analysis Tool",
+    description: "Python-based RocketPy simulation app for rocket trajectory and aerodynamic modeling. Automated input parameters and post-processing, cutting simulation setup time by 60%.",
+    stack: ["Python", "MATLAB", "RocketPy", "OpenRocket"],
+    github: "https://github.com/Eman-api/rocketpy-simulation",
     demo: null,
   },
   {
-    title: "PLC Car Wash Cell",
-    description: "Fully automated car wash control logic and HMI screens implemented for capstone course.",
-    stack: ["Siemens/Allen‑Bradley", "Ladder Logic", "HMI"],
-    github: "https://github.com/youruser/plc-carwash",
+    title: "ABB Robot Pick-and-Place Automation",
+    description: "Programmed ABB IRB robotic arm using RAPID language for automated pick-and-place operations. Optimized motion paths to reduce cycle time by 25%.",
+    stack: ["ABB RAPID", "RobotStudio", "PLC", "Sensors"],
+    github: "https://github.com/Eman-api/abb-robot-automation",
     demo: null,
   },
   {
-    title: "All‑Terrain Drone Concept",
-    description: "Tri‑mode drone (air/land/water) with foldable propulsion, early CAD + feasibility analysis.",
-    stack: ["SolidWorks", "Arduino", "Control"],
-    github: "https://github.com/youruser/at-drone",
+    title: "Allen-Bradley PLC Control System",
+    description: "Designed and programmed an Allen-Bradley PLC for fully automated multi-cylinder process using proximity sensors and solenoid valves with safety interlocks.",
+    stack: ["RSLogix 5000", "Ladder Logic", "Automation Studio"],
+    github: "https://github.com/Eman-api/plc-control-system",
+    demo: null,
+  },
+  {
+    title: "Pneumatic Logic Lab System",
+    description: "Constructed AND/OR valve-controlled pneumatic circuits for dual-operator actuation. Optimized cylinder speed using flow regulators and quick exhaust valves.",
+    stack: ["Automation Studio", "Pneumatics", "Control Logic"],
+    github: "https://github.com/Eman-api/pneumatic-logic",
     demo: null,
   },
 ];
 
 const EXPERIENCE = [
   {
-    org: "RIT Electric Vehicle Team",
-    role: "Controls & Systems Member",
+    org: "RIT Launch IREC (Rocketry Club)",
+    role: "Simulation & Analysis Lead",
+    time: "Sep 2025 — Present",
+    bullets: [
+      "Developed Python-based RocketPy simulation tools for trajectory and aerodynamic modeling.",
+      "Validated results through OpenRocket comparisons, improving flight accuracy predictions.",
+    ],
+  },
+  {
+    org: "North River Shipyard",
+    role: "Boat/Ship Engineer & Mechanic Intern",
+    time: "Summer 2025",
+    bullets: [
+      "Assisted with diagnostics, repair, and maintenance of marine engines and hydraulic systems.",
+      "Performed hands-on troubleshooting and testing of propulsion systems and onboard electronics.",
+      "Collaborated with senior engineers on system calibration and testing for large vessels.",
+    ],
+  },
+  {
+    org: "Society of Hispanic Professional Engineers (SHPE)",
+    role: "Active Member",
     time: "2023 — Present",
     bullets: [
-      "Assisted with control systems and sensor integration across subsystems.",
-      "Collaborated on testing plans and data logging workflows.",
+      "Engaged in professional development workshops and networking events.",
+      "Contributed to community outreach and STEM education initiatives.",
     ],
   },
   {
-    org: "CET Student Activity Board (SAB)",
-    role: "Member / Event Ops",
-    time: "2025 — Present",
+    org: "CET Student Activity Board (CETSAB)",
+    role: "Member / Event Coordinator",
+    time: "2024 — Present",
     bullets: [
-      "Organized campus events; managed logistics and vendor communication.",
-      "Drove student engagement initiatives with measurable attendance growth.",
-    ],
-  },
-  {
-    org: "Fed Challenge (RIT ECON 201)",
-    role: "Analyst & Presenter",
-    time: "Spring 2025",
-    bullets: [
-      "Built macroeconomic outlooks and policy recommendations for mock FOMC.",
-      "Delivered concise, data‑backed presentations to judges and peers.",
+      "Organized campus events and managed logistics for engineering student activities.",
+      "Collaborated with faculty and student organizations to enhance campus engagement.",
     ],
   },
 ];
@@ -242,13 +300,22 @@ const About = () => (
     <Container className="py-16">
       <SectionTitle
         title="About"
-        subtitle={`Based in ${PROFILE.location}. Open to internships and collaborations.`}
+        subtitle={`${PROFILE.education} • Dean's List 2023-2024, 2024-2025`}
       />
       <div className="prose max-w-none text-gray-700">
         <p>
-          I'm {PROFILE.name}, a third‑year Mechatronics Engineering student at RIT.
-          I build things at the intersection of mechanics, software, and human impact.
-          Recent work spans PLC automation, simulation tools, and robotics concepts.
+          I'm {PROFILE.name}, a Mechatronics Engineering student at Rochester Institute of Technology (RIT), 
+          graduating in May 2027. I specialize in robotics, automation, and embedded systems—building intelligent 
+          machines that bridge mechanical design, electronics, and software.
+        </p>
+        <p className="mt-4">
+          My hands-on experience spans PLC programming (Allen-Bradley/Siemens), robotic arm automation with ABB RAPID, 
+          pneumatic/hydraulic control systems, and Python-based simulation tools. I've optimized robot cycle times by 25%, 
+          reduced simulation setup by 60%, and designed safety-critical control logic for industrial automation.
+        </p>
+        <p className="mt-4">
+          Currently seeking a <strong>2025 summer-fall co-op</strong> where I can apply my robotics and automation expertise 
+          to real-world engineering challenges. Let's build something impactful together.
         </p>
       </div>
     </Container>
