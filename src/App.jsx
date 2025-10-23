@@ -23,9 +23,9 @@ const SectionTitle = ({ title, subtitle }) => (
 
 // ---------- Data
 const PROFILE = {
-  name: "Enmanuel Matos Reyes",
-  title: "Mechatronics Engineering Student • Robotics & Automation",
-  blurb: "Mechatronics student with hands-on experience in automation, CAD modeling, and sensor-based systems. Strong foundation in PLC programming, mechanical design, and cross-functional teamwork. Seeking a 2025 summer-fall co-op focusing on Robotics and Automation.",
+  name: "Enmanuel Matos",
+  title: "Mechatronics Engineer • Developer • Builder",
+  blurb: "Inventive, purpose‑driven engineer blending mechanics, software, and AI to build useful systems.",
   location: "Rochester, NY",
   email: "enmanuel.m.r.1216@gmail.com",
   github: "https://github.com/Eman-api",
@@ -284,11 +284,15 @@ const Hero = () => (
           </div>
         </div>
         <div className="md:justify-self-end">
-          <div className="aspect-square w-full max-w-sm rounded-2xl border p-6">
-            <div className="h-full w-full rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-500">
-              <span className="text-center px-4">Your Photo / Logo</span>
-            </div>
-          </div>
+          
+          <div className="aspect-square w-full max-w-sm rounded-2xl border p-6 overflow-hidden">
+  <img 
+    src="/portfolio/Profesional Headshot.png" 
+    alt="Enmanuel Matos"
+    className="h-full w-full rounded-xl object-cover"
+  />
+</div>
+
         </div>
       </div>
     </Container>
@@ -300,22 +304,13 @@ const About = () => (
     <Container className="py-16">
       <SectionTitle
         title="About"
-        subtitle={`${PROFILE.education} • Dean's List 2023-2024, 2024-2025`}
+        subtitle={`Based in ${PROFILE.location}. Open to internships and collaborations.`}
       />
       <div className="prose max-w-none text-gray-700">
         <p>
-          I'm {PROFILE.name}, a Mechatronics Engineering student at Rochester Institute of Technology (RIT), 
-          graduating in May 2027. I specialize in robotics, automation, and embedded systems—building intelligent 
-          machines that bridge mechanical design, electronics, and software.
-        </p>
-        <p className="mt-4">
-          My hands-on experience spans PLC programming (Allen-Bradley/Siemens), robotic arm automation with ABB RAPID, 
-          pneumatic/hydraulic control systems, and Python-based simulation tools. I've optimized robot cycle times by 25%, 
-          reduced simulation setup by 60%, and designed safety-critical control logic for industrial automation.
-        </p>
-        <p className="mt-4">
-          Currently seeking a <strong>2025 summer-fall co-op</strong> where I can apply my robotics and automation expertise 
-          to real-world engineering challenges. Let's build something impactful together.
+          I'm {PROFILE.name}, a third‑year Mechatronics Engineering student at RIT.
+          I build things at the intersection of mechanics, software, and human impact.
+          Recent work spans PLC automation, simulation tools, and robotics concepts.
         </p>
       </div>
     </Container>
