@@ -95,6 +95,12 @@ const PROJECTS = [
     stack: ["ABB RAPID", "RobotStudio", "PLC", "Sensors"],
     github: "https://github.com/Eman-api/abb-robot-automation",
     demo: null,
+    media: {
+      video: "/Portfolio/ABB%20Robotics%20Projects/Procedure_Sequence_Matos.mp4",
+      diagram: "/Portfolio/ABB%20Robotics%20Projects/Station%20Logic_Matos.png",
+      report: "/Portfolio/ABB%20Robotics%20Projects/RMET_585%20Final%20Project%20Report%20(1).pdf",
+      simulation: "/Portfolio/ABB%20Robotics%20Projects/FInalProject_Matos.rspag",
+    },
   },
   {
     title: "Allen-Bradley PLC Control System",
@@ -331,35 +337,67 @@ const About = () => (
 );
 
 const ProjectCard = ({ p }) => (
-  <article className="rounded-2xl border p-5 hover:shadow-md transition-shadow">
-    <h3 className="font-semibold text-lg">{p.title}</h3>
-    <p className="mt-2 text-sm text-gray-700">{p.description}</p>
-    <div className="mt-3 flex flex-wrap gap-2" role="list" aria-label="Technologies used">
-      {p.stack.map((t) => (
-        <span key={t} className="text-xs px-2 py-1 rounded-full border bg-gray-50">
-          {t}
-        </span>
-      ))}
-    </div>
-    <div className="mt-4 flex gap-3">
-      <a
-        href={p.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm underline hover:opacity-80 transition-opacity"
+  <article className="rounded-2xl border overflow-hidden hover:shadow-md transition-shadow">
+    {p.media?.video && (
+      <video
+        className="w-full"
+        controls
+        preload="none"
+        poster={p.media.diagram || undefined}
+        aria-label={`Demo video for ${p.title}`}
       >
-        GitHub
-      </a>
-      {p.demo && (
+        <source src={p.media.video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    )}
+    <div className="p-5">
+      <h3 className="font-semibold text-lg">{p.title}</h3>
+      <p className="mt-2 text-sm text-gray-700">{p.description}</p>
+      <div className="mt-3 flex flex-wrap gap-2" role="list" aria-label="Technologies used">
+        {p.stack.map((t) => (
+          <span key={t} className="text-xs px-2 py-1 rounded-full border bg-gray-50">
+            {t}
+          </span>
+        ))}
+      </div>
+      <div className="mt-4 flex flex-wrap gap-3">
         <a
-          href={p.demo}
+          href={p.github}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm underline hover:opacity-80 transition-opacity"
         >
-          Live Demo
+          GitHub
         </a>
-      )}
+        {p.media?.report && (
+          <a
+            href={p.media.report}
+            download
+            className="text-sm underline hover:opacity-80 transition-opacity"
+          >
+            Report (PDF)
+          </a>
+        )}
+        {p.media?.simulation && (
+          <a
+            href={p.media.simulation}
+            download
+            className="text-sm underline hover:opacity-80 transition-opacity"
+          >
+            RobotStudio Files
+          </a>
+        )}
+        {p.demo && (
+          <a
+            href={p.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm underline hover:opacity-80 transition-opacity"
+          >
+            Live Demo
+          </a>
+        )}
+      </div>
     </div>
   </article>
 );
