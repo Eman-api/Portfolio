@@ -30,7 +30,7 @@ const PROFILE = {
   email: "enmanuel.m.r.1216@gmail.com",
   github: "https://github.com/Eman-api",
   linkedin: "https://www.linkedin.com/in/enmanuel-matos",
-  resumeUrl: "/portfolio/resume.pdf",
+  resumeUrl: "/Portfolio/resume.pdf",
   phone: "(646)-387-3270",
   education: "Rochester Institute of Technology (RIT) - B.S. Mechatronics, May 2027 - GPA 3.07",
 };
@@ -293,7 +293,7 @@ const Hero = () => (
           
           <div className="aspect-square w-full max-w-sm rounded-2xl border p-6 overflow-hidden">
   <img 
-    src="/portfolio/Profesional Headshot.png" 
+    src="/Portfolio/Profesional Headshot.png"
     alt="Enmanuel Matos"
     className="h-full w-full rounded-xl object-cover"
   />
