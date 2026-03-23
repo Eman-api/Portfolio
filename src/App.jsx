@@ -293,7 +293,7 @@ const Hero = () => (
           
           <div className="aspect-square w-full max-w-sm rounded-2xl border p-6 overflow-hidden">
   <img 
-    src="/Portfolio/Profesional Headshot.png"
+    src="/Portfolio/headshot.png"
     alt="Enmanuel Matos"
     className="h-full w-full rounded-xl object-cover"
   />
