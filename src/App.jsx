@@ -23,7 +23,7 @@ const SectionTitle = ({ title, subtitle }) => (
 
 // ---------- Data
 const PROFILE = {
-  name: "Enmanuel Matos",
+  name: "Enmanuel Matos Reyes",
   title: "Mechatronics Engineer • Developer • Builder",
   blurb: "Inventive, purpose‑driven engineer blending mechanics, software, and AI to build useful systems.",
   location: "Rochester, NY",
@@ -306,11 +306,24 @@ const About = () => (
         title="About"
         subtitle={`Based in ${PROFILE.location}. Open to internships and collaborations.`}
       />
-      <div className="prose max-w-none text-gray-700">
+      <div className="prose max-w-none text-gray-700 space-y-4">
         <p>
-          I'm {PROFILE.name}, a third‑year Mechatronics Engineering student at RIT.
-          I build things at the intersection of mechanics, software, and human impact.
-          Recent work spans PLC automation, simulation tools, and robotics concepts.
+          I'm {PROFILE.name}, a third‑year Mechatronics Engineering student at RIT with a passion
+          for building systems that sit at the crossroads of hardware, software, and real-world impact.
+          From programming robotic arms and PLC control systems to developing rocket flight simulation
+          tools, I thrive on tackling problems that require thinking across disciplines.
+        </p>
+        <p>
+          My goal is to become an engineer who bridges the gap between mechanical design and intelligent
+          software — creating autonomous systems that are not just functional, but adaptive and purposeful.
+          I'm especially drawn to robotics, aerospace, and industrial automation, where precision engineering
+          meets complex decision-making.
+        </p>
+        <p>
+          Looking ahead, I want to contribute to projects that push the boundaries of what machines can do —
+          whether that's advancing rocketry and space systems, designing smarter manufacturing lines, or
+          building embedded AI into physical products. I'm actively seeking internships and research
+          opportunities where I can grow alongside engineers who challenge the status quo.
         </p>
       </div>
     </Container>
