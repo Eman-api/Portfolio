@@ -38,7 +38,9 @@ const PROFILE = {
 const SKILLS = {
   "Robotics & Automation": [
     "RobotStudio",
+    "Studio 5000",
     "PLC Programming (Allen-Bradley/Siemens)",
+    "Autonomous Mobile Robotics",
     "Pneumatic & Hydraulic Systems",
     "Sensor Integration",
     "PID & Motion Control"
@@ -118,15 +120,18 @@ const PROJECTS = [
   },
 ];
 
-const EXPERIENCE = [
+const PROFESSIONAL_EXPERIENCE = [
   {
-    org: "RIT Launch IREC (Rocketry Club)",
-    role: "Simulation & Analysis Lead",
-    time: "Sep 2025 — Present",
+    org: "Dematic",
+    role: "Automation Engineering Intern",
+    time: "Jan 2026 — Aug 2026",
+    location: "Rochester, NY",
     bullets: [
-      "Developed Python-based RocketPy simulation tools for trajectory and aerodynamic modeling.",
-      "Validated results through OpenRocket comparisons, improving flight accuracy predictions.",
+      "Delivered multiple on-site system installations and customer code reviews, each closing at 100% customer satisfaction.",
+      "Architected a fully autonomous beverage-retrieval robot for Dematic's Rochester office, owning the system from concept through build and integration.",
+      "Served as a Studio 5000 resource for customer support, analyzing and documenting legacy control code to resolve issues and guide modernization.",
     ],
+    stack: ["Studio 5000", "Allen-Bradley PLC", "Ladder Logic", "Autonomous Robotics", "System Commissioning"],
   },
   {
     org: "North River Shipyard",
@@ -136,6 +141,18 @@ const EXPERIENCE = [
       "Assisted with diagnostics, repair, and maintenance of marine engines and hydraulic systems.",
       "Performed hands-on troubleshooting and testing of propulsion systems and onboard electronics.",
       "Collaborated with senior engineers on system calibration and testing for large vessels.",
+    ],
+  },
+];
+
+const INVOLVEMENT = [
+  {
+    org: "RIT Launch IREC (Rocketry Club)",
+    role: "Simulation & Analysis Lead",
+    time: "Sep 2025 — Present",
+    bullets: [
+      "Developed Python-based RocketPy simulation tools for trajectory and aerodynamic modeling.",
+      "Validated results through OpenRocket comparisons, improving flight accuracy predictions.",
     ],
   },
   {
@@ -167,6 +184,7 @@ const Navbar = ({ route, setRoute }) => {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#involvement", label: "Involvement" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
@@ -314,7 +332,7 @@ const About = () => (
       />
       <div className="prose max-w-none text-gray-700 space-y-4">
         <p>
-          I'm {PROFILE.name}, a third‑year Mechatronics Engineering student at RIT with a passion
+          I'm {PROFILE.name}, a fourth‑year Mechatronics Engineering student at RIT with a passion
           for building systems that sit at the crossroads of hardware, software, and real-world impact.
           From programming robotic arms and PLC control systems to developing rocket flight simulation
           tools, I thrive on tackling problems that require thinking across disciplines.
@@ -322,13 +340,15 @@ const About = () => (
         <p>
           My goal is to become an engineer who bridges the gap between mechanical design and intelligent
           software — creating autonomous systems that are not just functional, but adaptive and purposeful.
-          I'm especially drawn to robotics, aerospace, and industrial automation, where precision engineering
-          meets complex decision-making.
+          That pull has sharpened into a focus on industrial automation and renewable energy. The machines
+          that move the world's goods and the systems that power them are both being rebuilt right now, and
+          I want to work where those two problems meet.
         </p>
         <p>
-          Looking ahead, I want to contribute to projects that push the boundaries of what machines can do —
-          whether that's advancing rocketry and space systems, designing smarter manufacturing lines, or
-          building embedded AI into physical products. I'm actively seeking internships and research
+          Looking ahead, I want to put automation to work on sustainability — designing manufacturing lines
+          that waste less, integrating controls for solar, wind, and energy storage systems, and engineering
+          hardware built to last rather than to be replaced. A robust, green world isn't a trade-off against
+          good engineering; it's what good engineering produces. I'm actively seeking internships and research
           opportunities where I can grow alongside engineers who challenge the status quo.
         </p>
       </div>
@@ -415,26 +435,55 @@ const Projects = () => (
   </section>
 );
 
+const ExperienceCard = ({ e }) => (
+  <article className="rounded-2xl border p-5">
+    <div className="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h3 className="font-semibold">{e.role}</h3>
+        <p className="text-sm text-gray-600">
+          {e.org}
+          {e.location && <span className="text-gray-500"> • {e.location}</span>}
+        </p>
+      </div>
+      <time className="text-sm text-gray-500">{e.time}</time>
+    </div>
+    <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 space-y-1">
+      {e.bullets.map((b, i) => (
+        <li key={i}>{b}</li>
+      ))}
+    </ul>
+    {e.stack && (
+      <div className="mt-4 flex flex-wrap gap-2" role="list" aria-label="Tools and technologies used">
+        {e.stack.map((t) => (
+          <span key={t} className="text-xs px-2 py-1 rounded-full border bg-gray-50">
+            {t}
+          </span>
+        ))}
+      </div>
+    )}
+  </article>
+);
+
 const Experience = () => (
   <section id="experience" aria-labelledby="experience-title">
     <Container className="py-16">
-      <SectionTitle title="Experience" subtitle="Roles, clubs, and teams." />
+      <SectionTitle title="Professional Experience" subtitle="Internships and industry work." />
       <div className="space-y-6">
-        {EXPERIENCE.map((e) => (
-          <article key={e.org} className="rounded-2xl border p-5">
-            <div className="flex items-center justify-between gap-4 flex-wrap">
-              <div>
-                <h3 className="font-semibold">{e.role}</h3>
-                <p className="text-sm text-gray-600">{e.org}</p>
-              </div>
-              <time className="text-sm text-gray-500">{e.time}</time>
-            </div>
-            <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 space-y-1">
-              {e.bullets.map((b, i) => (
-                <li key={i}>{b}</li>
-              ))}
-            </ul>
-          </article>
+        {PROFESSIONAL_EXPERIENCE.map((e) => (
+          <ExperienceCard key={e.org} e={e} />
+        ))}
+      </div>
+    </Container>
+  </section>
+);
+
+const Involvement = () => (
+  <section id="involvement" aria-labelledby="involvement-title">
+    <Container className="py-16">
+      <SectionTitle title="Leadership & Involvement" subtitle="Clubs, teams, and campus organizations." />
+      <div className="space-y-6">
+        {INVOLVEMENT.map((e) => (
+          <ExperienceCard key={e.org} e={e} />
         ))}
       </div>
     </Container>
@@ -665,6 +714,7 @@ export default function PortfolioApp() {
           <About />
           <Projects />
           <Experience />
+          <Involvement />
           <Skills />
           <Contact />
         </main>
