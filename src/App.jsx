@@ -328,11 +328,11 @@ const About = () => (
     <Container className="py-16">
       <SectionTitle
         title="About"
-        subtitle={`Based in ${PROFILE.location}. Open to internships and collaborations.`}
+        subtitle={`Based in ${PROFILE.location}. Seeking full-time engineering roles starting Spring 2027.`}
       />
       <div className="prose max-w-none text-gray-700 space-y-4">
         <p>
-          I'm {PROFILE.name}, a fourth‑year Mechatronics Engineering student at RIT with a passion
+          I'm {PROFILE.name}, a fifth‑year Mechatronics Engineering student at RIT with a passion
           for building systems that sit at the crossroads of hardware, software, and real-world impact.
           From programming robotic arms and PLC control systems to developing rocket flight simulation
           tools, I thrive on tackling problems that require thinking across disciplines.
@@ -348,8 +348,8 @@ const About = () => (
           Looking ahead, I want to put automation to work on sustainability — designing manufacturing lines
           that waste less, integrating controls for solar, wind, and energy storage systems, and engineering
           hardware built to last rather than to be replaced. A robust, green world isn't a trade-off against
-          good engineering; it's what good engineering produces. I'm actively seeking internships and research
-          opportunities where I can grow alongside engineers who challenge the status quo.
+          good engineering; it's what good engineering produces. I'm seeking full-time engineering roles
+          starting Spring 2027, on teams where I can grow alongside engineers who challenge the status quo.
         </p>
       </div>
     </Container>
