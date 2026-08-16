@@ -328,7 +328,7 @@ const About = () => (
     <Container className="py-16">
       <SectionTitle
         title="About"
-        subtitle={`Based in ${PROFILE.location}. Seeking full-time engineering roles starting Spring 2027.`}
+        subtitle={`Based in ${PROFILE.location}. Seeking full-time engineering roles starting May 2027.`}
       />
       <div className="prose max-w-none text-gray-700 space-y-4">
         <p>
@@ -349,7 +349,7 @@ const About = () => (
           that waste less, integrating controls for solar, wind, and energy storage systems, and engineering
           hardware built to last rather than to be replaced. A robust, green world isn't a trade-off against
           good engineering; it's what good engineering produces. I'm seeking full-time engineering roles
-          starting Spring 2027, on teams where I can grow alongside engineers who challenge the status quo.
+          starting May 2027, on teams where I can grow alongside engineers who challenge the status quo.
         </p>
       </div>
     </Container>
